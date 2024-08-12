@@ -1,0 +1,253 @@
+/* Estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(89, 6, 198);
+}
+
+header h1, a {
+    color: #fff;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+}
+
+header nav li {
+    display: inline;
+    padding: 16px;
+    font-size: 14px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25%; /* Simplificado para padding horizontal */
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #fff;
+}
+
+.store {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+.about > div {
+    flex: 1; 
+}
+
+section.about {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+section.products {
+    color: #fff;
+}
+
+.container.sessao {
+    max-width: 70%;
+}
+
+p {
+    text-align: justify;
+    padding-top: 16px;
+}
+
+hr {
+    border: 0;
+    border-top: 0.3px solid rgb(89, 6, 198); 
+    
+}
+
+hr.hrBranca {
+    border-top: 0.3px solid rgb(254, 254, 254);
+}
+
+.produto {
+    display: flex;
+    background-color: rgb(89, 6, 198);
+    margin-top: 70px;
+    justify-content: center;
+}
+
+.produto h2 {
+    color: #fff;
+}
+
+.produtos {
+    display: flex;              
+    flex-wrap: wrap;            
+    gap: 20px;                  
+    justify-content: space-between; 
+    padding-bottom: 15px;
+}
+
+.produtos article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;  
+    text-align: center; 
+}
+
+.produtos article img {
+    width: 100%;       
+    height: auto;      
+    max-width: 200px;  
+    /* Define a altura máxima da imagem para que o texto não ultrapasse */
+}
+
+.produtos article p {
+    width: 100%;       
+    margin: 10px 0;    
+    text-align: center; 
+    word-wrap: break-word; 
+}
+
+button {
+    width: 100%;
+    background-color: #fff;
+    height: 30px;
+    font-family: "Kanit", sans-serif; 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1023px) {
+    header .container {
+        padding: 0 10%;
+    }
+
+    section.about {
+        background-color: #fff;
+    }
+
+    section.about .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    section.about img.store {
+        width: 100%;
+        height: auto;
+    }
+
+    section.about h2 {
+        margin-top: 20px;
+    }
+
+    section.about p {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 2 colunas */
+        gap: 16px;
+    }
+
+    .produtos article {
+        flex: none;
+    }
+
+    section.products {
+        color: #fff;
+    }
+
+    .container.sessao {
+        max-width: 70%;
+        display: flow;
+    }
+}
+
+@media screen and (min-width:641px ) and (max-width:1023px) and (orientation: landscape) {
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) !important; 
+        gap: 16px;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:641px) {
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 16px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 2 colunas */
+        gap: 16px;
+        padding: 10px;
+    }
+}
+
+/* Media query para telas a partir de 1024px */
+@media screen and (min-width: 1024px) {
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+        gap: 16px;
+        padding: 10px;
+    }
+
+    .produtos article {
+        flex: none;
+    }
+
+
+
+}
+
+/* Media query para tablets na orientação horizontal */
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    header .container {
+        padding: 0 15%; /* Ajusta o padding para orientação paisagem */
+    }
+
+    section.about {
+        padding-top: 25px;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) !important; /* 4 colunas */
+        gap: 16px;
+        padding: 10px;
+    }
+
+    .produtos article {
+        flex: none;
+    }
+
+    .store {
+        max-width: 50%;
+    }
+}
